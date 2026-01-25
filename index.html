@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Haoyang Shi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;600;700&family=Lexend:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <nav class="top-menu" aria-label="Primary">
+      <div class="menu-inner">
+        <div class="menu-group">
+          <button class="menu-link" type="button" data-target="academics">Academics</button>
+          <button class="menu-link" type="button" data-target="interests">Interests</button>
+        </div>
+        <span class="menu-title">Personal Site</span>
+        <div class="menu-group">
+          <button class="menu-link" type="button" data-target="asdrp">ASDRP</button>
+          <button class="menu-link" type="button" data-scroll="contact">Contact Me</button>
+        </div>
+      </div>
+    </nav>
+    <aside class="corner-panel">
+      <h2>ABOUT ME</h2>
+      <h3>Haoyang Shi</h3>
+      <p>
+        Hi! I’m Haoyang, an 11th grader at Mission San Jose High School. I am currently part of
+        the Dennis Liu Group in the Aspiring Scholars Directed Research Program, where I am
+        learning Python, software engineering, and beginning to work on technical projects.
+      </p>
+      <p>
+        I play badminton and am a member of the Varsity Badminton team at Mission San Jose High
+        School. In my free time, I enjoy watching badminton, spending time with my pets,
+        working on digital projects, and binge-watching anime.
+      </p>
+    </aside>
+    <section class="scene" aria-label="Homepage">
+      <header class="intro intro--hidden">
+        <p class="eyebrow">Personal Site</p>
+        <h1>Haoyang Shi</h1>
+        <p class="lead">11th-grade student at Mission San Jose High School.</p>
+      </header>
+
+      <div class="photo-card photo-card--center" aria-label="About Me photo">
+        <span class="photo-label">About Me</span>
+      </div>
+
+      <div class="section-separator" aria-hidden="true"></div>
+      <div class="carousel" aria-label="Featured carousel">
+        <button class="carousel-arrow" type="button" data-dir="prev" aria-label="Previous item">←</button>
+        <div class="carousel-track">
+          <div class="carousel-item">“I enjoy building things, learning new ideas, and finding time to enjoy what I love.”</div>
+          <div class="carousel-item">“Progress comes from consistency, curiosity, and patience.”</div>
+          <div class="carousel-item">“Learning is not about knowing everything, but about being willing to improve every day.”</div>
+        </div>
+        <button class="carousel-arrow" type="button" data-dir="next" aria-label="Next item">→</button>
+      </div>
+
+      <div class="photo-grid">
+        <div class="photo-row photo-row--right photo-row--shift-left">
+          <button class="photo-card" type="button" data-target="academics" aria-label="Open Academics">
+            <span class="photo-label">Academics</span>
+          </button>
+          <div class="photo-textbox">
+            <p>Courses I have taken or are currently taking at Mission San Jose High School.</p>
+            <p class="photo-callout">← <strong>Click image to see more</strong></p>
+          </div>
+        </div>
+        <div class="photo-row photo-row--left">
+          <div class="photo-textbox">
+            <p>My hobbies, likes, and favorites in sport, music, food, and activies.</p>
+            <p class="photo-callout"><strong>Click image to see more</strong> →</p>
+          </div>
+          <button class="photo-card" type="button" data-target="interests" aria-label="Open Interests">
+            <span class="photo-label">Interests</span>
+          </button>
+        </div>
+        <div class="photo-row photo-row--right photo-row--shift-left">
+          <button class="photo-card" type="button" data-target="asdrp" aria-label="Open ASDRP">
+            <span class="photo-label">ASDRP</span>
+          </button>
+          <div class="photo-textbox">
+            <p>My projects in the Dennis Liu Group at the ASDRP research program.</p>
+            <p class="photo-callout">← <strong>Click image to see more</strong></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-view" data-view="academics" aria-hidden="true">
+      <button class="back-button" type="button" aria-label="Go back">
+        ← Back
+      </button>
+      <h2 class="about-title about-title--visible about-title--panel">COURSES</h2>
+      <div class="courses-list">
+        <div class="course-item">
+          <div class="course-image-wrap">
+            <span class="course-image course-image--apchem" aria-hidden="true"></span>
+            <div class="gpa-overlay">
+              <p>Unweighted GPA: 3.8</p>
+              <p>Weighted GPA: 4.1</p>
+            </div>
+          </div>
+          <p>- AP Chem : Fast-paced chemistry coursework with labs</p>
+        </div>
+        <div class="course-item">
+          <span class="course-image course-image--physics" aria-hidden="true"></span>
+          <p>- AP Physics 1 : Algebra-based physics course with labs</p>
+        </div>
+        <div class="course-item">
+          <span class="course-image course-image--calc" aria-hidden="true"></span>
+          <p>- AP Calculus BC : Covers limits, derivatives, integrals, along with advanced techniques and series.</p>
+        </div>
+        <div class="course-item">
+          <span class="course-image course-image--eng" aria-hidden="true"></span>
+          <p>- English 11 Honors : Reading, writing, analysis, and projects.</p>
+        </div>
+        <div class="course-item">
+          <span class="course-image course-image--ps" aria-hidden="true"></span>
+          <div class="course-text">
+            <p>- Digital Imaging 2 : Photoshop and 3D sculpting</p>
+            <button class="page-link" type="button" data-target="imaging">Click here to see some of my work</button>
+          </div>
+        </div>
+      </div>
+      <div class="course-panel">
+        <div class="tests-planned">
+          <h3>TESTS PLANNED</h3>
+          <p>AP chem, AP Calc BC</p>
+          <p>Self-studying: AP Physics C Mechanics</p>
+          <p>Currently studying for the SAT</p>
+        </div>
+        <div class="past-projects">
+          <h3>PAST PROJECTS</h3>
+          <p>Worked in a research for HR using ML. Did data analysis using Pandas and other tools to clean an NLSY dataset and helped others use it in ML</p>
+          <div class="past-projects-image" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+    <section class="about-view" data-view="interests" aria-hidden="true">
+      <button class="back-button" type="button" aria-label="Go back">
+        ← Back
+      </button>
+      <h2 class="about-title">INTERESTS</h2>
+    </section>
+    <section class="about-view" data-view="asdrp" aria-hidden="true">
+      <button class="back-button" type="button" aria-label="Go back">
+        ← Back
+      </button>
+      <h2 class="about-title">ASDRP</h2>
+    </section>
+    <section class="about-view about-view--imaging" data-view="imaging" aria-hidden="true">
+      <button class="back-button" type="button" data-back="academics" aria-label="Go back">
+        ← Back
+      </button>
+      <div class="gallery">
+        <div class="gallery-item gallery-item--wooflien" aria-hidden="true"></div>
+        <div class="gallery-item gallery-item--serpent" aria-hidden="true"></div>
+        <div class="gallery-item gallery-item--lizardman" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <section class="pets-section" aria-label="My pets">
+      <h2>MY PETS</h2>
+      <div class="pets-grid">
+        <article class="pet-card pet-card--cat">
+          <div class="pet-image" role="img" aria-label="Cat placeholder"></div>
+          <button class="pet-toggle" type="button" aria-expanded="false">
+            <span class="pet-arrow">↓</span>
+          </button>
+          <div class="pet-details" aria-hidden="true">
+            <p><strong>Age:</strong> 4 years old</p>
+            <p><strong>Breed:</strong> American Shorthair, tuxedo fur pattern</p>
+            <p><strong>Personality:</strong> Chill, athletic, outdoor-loving</p>
+            <p><strong>Origin:</strong> Took in as a stray</p>
+          </div>
+        </article>
+        <article class="pet-card pet-card--dog">
+          <div class="pet-image" role="img" aria-label="Dog placeholder"></div>
+          <button class="pet-toggle" type="button" aria-expanded="false">
+            <span class="pet-arrow">↓</span>
+          </button>
+          <div class="pet-details" aria-hidden="true">
+            <p><strong>Age:</strong> 3 years old</p>
+            <p><strong>Breed:</strong> Golden Retriever</p>
+            <p><strong>Personality:</strong> Loyal, foodie, sedentary</p>
+            <p><strong>Origin:</strong> Bought from a breeder</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact" aria-label="Contact me">
+      <h2>CONTACT ME</h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p><strong>Work Email:</strong> Gracefulshi3@gmail.com</p>
+          <p><strong>School Email:</strong> haoshi880@fusdk12.net</p>
+          <p><strong>ASDRP Email:</strong> haoyang.shi@asdrp.com</p>
+          <p><strong>Phone:</strong> (650)-766-2028</p>
+        </div>
+        <div class="contact-icons" aria-label="Social links">
+          <h3>SOCIALS <span class="socials-arrow" aria-hidden="true">↘</span></h3>
+          <a class="icon-button" data-platform="discord" aria-label="Discord" href="https://discord.com/users/953885945223061514" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M19.5 6.2c-1.2-.9-2.5-1.5-3.8-1.8l-.5 1c-1.3-.2-2.6-.2-3.9 0l-.5-1c-1.4.3-2.7.9-3.8 1.8-2.4 3.5-3 6.9-2.7 10.2 1.6 1.2 3.4 2 5.4 2.4l.7-1.1c-.7-.3-1.3-.6-1.9-1.1.2-.2.4-.3.6-.5 3.7 1.7 7.6 1.7 11.3 0 .2.2.4.3.6.5-.6.5-1.2.8-1.9 1.1l.7 1.1c2-.4 3.8-1.2 5.4-2.4.4-3.7-.7-7.1-2.7-10.2ZM9.5 13.6c-.7 0-1.3-.7-1.3-1.5s.6-1.5 1.3-1.5 1.3.7 1.3 1.5-.6 1.5-1.3 1.5Zm5 0c-.7 0-1.3-.7-1.3-1.5s.6-1.5 1.3-1.5 1.3.7 1.3 1.5-.6 1.5-1.3 1.5Z"/>
+            </svg>
+            Discord
+          </a>
+          <a class="icon-button" data-platform="instagram" aria-label="Instagram" href="https://www.instagram.com/grassfulshi/" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4Zm10 2H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2Zm-5 3.5A4.5 4.5 0 1 1 7.5 13 4.5 4.5 0 0 1 12 8.5Zm0 2A2.5 2.5 0 1 0 14.5 13 2.5 2.5 0 0 0 12 10.5Zm5-3.2a1.1 1.1 0 1 1-1.1 1.1 1.1 1.1 0 0 1 1.1-1.1Z"/>
+            </svg>
+            Instagram
+          </a>
+          <a class="icon-button" data-platform="github" aria-label="GitHub" href="https://github.com/Haoshi880" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.3-3.4-1.3-.4-1-.9-1.2-.9-1.2-.8-.6.1-.6.1-.6.9.1 1.4.9 1.4.9.8 1.3 2.1.9 2.6.7.1-.6.3-.9.5-1.1-2.2-.2-4.5-1.1-4.5-4.9 0-1.1.4-1.9 1-2.6-.1-.2-.4-1.3.1-2.6 0 0 .9-.3 2.7 1a9.3 9.3 0 0 1 4.9 0c1.8-1.3 2.7-1 2.7-1 .5 1.3.2 2.4.1 2.6.6.7 1 1.6 1 2.6 0 3.8-2.3 4.7-4.5 4.9.3.3.6.8.6 1.6V21c0 .3.2.6.7.5A10 10 0 0 0 12 2Z"/>
+            </svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
