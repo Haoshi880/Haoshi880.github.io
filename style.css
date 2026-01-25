@@ -488,6 +488,7 @@ body::after {
   z-index: 2;
 }
 
+
 .is-imaging .corner-panel {
   display: none;
 }
@@ -641,6 +642,30 @@ body.is-imaging .menu-link:hover {
 
 .course-image--eng {
   background-image: url("ENG.png");
+}
+
+.course-image--me {
+  background-image: url("Me.jpg");
+}
+
+.course-image--code {
+  background-image: url("Code.png");
+}
+
+.course-image--game {
+  background-image: url("Game.png");
+}
+
+.course-image--crunchyroll {
+  background-image: url("Crunchyroll.webp");
+}
+
+.course-image--marsh {
+  background-image: url("Marsh.jpg");
+}
+
+.course-image--spaghetti {
+  background-image: url("Spaghetti.jpg");
 }
 
 .tests-planned {
