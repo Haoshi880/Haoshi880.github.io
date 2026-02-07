@@ -12,6 +12,7 @@
 html {
   background: #faf7f2;
   height: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -23,6 +24,7 @@ body {
   border-left: 30px solid #eeeae3;
   border-right: 30px solid #eeeae3;
   position: relative;
+  overflow-x: hidden;
 }
 
 body::before,
@@ -108,6 +110,13 @@ body::after {
   color: #111827;
 }
 
+.menu-title--link {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+}
+
 .menu-link--static {
   cursor: default;
   opacity: 0.7;
@@ -181,6 +190,8 @@ body::after {
   justify-items: center;
   position: relative;
   transition: transform 600ms ease, opacity 400ms ease;
+  transform: translateX(-120px);
+  z-index: 4;
 }
 
 .intro {
@@ -212,7 +223,7 @@ body::after {
   gap: 64px;
   justify-items: center;
   width: min(1400px, 96vw);
-  margin-top: 300px;
+  margin-top: 400px;
 }
 
 .photo-row {
@@ -224,6 +235,7 @@ body::after {
 
 .photo-row--left {
   justify-content: flex-start;
+  transform: translateX(120px);
 }
 
 .photo-row--right {
@@ -290,7 +302,7 @@ body::after {
   display: grid;
   grid-template-columns: 88px 1fr 88px;
   align-items: center;
-  z-index: 3;
+  z-index: 6;
   pointer-events: auto;
 }
 
@@ -359,7 +371,8 @@ body::after {
 }
 
 
-.photo-card[data-target="academics"] {
+.photo-card[data-target="academics"],
+.photo-card[data-scroll="academics"] {
   --y-offset: 0px;
   background-image: url("MSJ.jpg");
   background-size: cover;
@@ -367,7 +380,8 @@ body::after {
   background-repeat: no-repeat;
 }
 
-.photo-card[data-target="interests"] {
+.photo-card[data-target="interests"],
+.photo-card[data-scroll="interests"] {
   --y-offset: 0px;
   background-image: url("Badminton.jpeg");
   background-size: cover;
@@ -375,7 +389,8 @@ body::after {
   background-repeat: no-repeat;
 }
 
-.photo-card[data-target="asdrp"] {
+.photo-card[data-target="asdrp"],
+.photo-card[data-scroll="asdrp"] {
   --y-offset: 0px;
   background-image: url("ASDRP.png");
   background-size: cover;
@@ -391,10 +406,10 @@ body::after {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
   padding: 36px 44px;
   display: grid;
-  gap: 24px;
+  gap: 20px;
   align-content: center;
-  font-size: 1.35rem;
-  line-height: 1.5;
+  font-size: 2.2rem;
+  line-height: 1.35;
 }
 
 .photo-textbox-title {
@@ -410,7 +425,7 @@ body::after {
 }
 
 .photo-callout {
-  font-size: 1.2rem;
+  font-size: 1.9rem;
   letter-spacing: 0.04em;
 }
 
@@ -473,6 +488,106 @@ body::after {
   z-index: 4;
 }
 
+.content-section {
+  position: relative;
+  padding: 140px 8vw 120px;
+  width: 100%;
+  justify-self: stretch;
+}
+
+#academics {
+  transform: translateX(-120px);
+  padding-bottom: 40px;
+  padding-top: 60px;
+}
+
+#interests {
+  padding-top: 60px;
+}
+
+#asdrp {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.asdrp-showcase {
+  display: grid;
+  gap: 24px;
+  justify-items: start;
+  margin-top: 40px;
+}
+
+.asdrp-image {
+  width: 400px;
+  height: 400px;
+  border-radius: 16px;
+  border: 2px solid #000000;
+  background-image: url("Hangman.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.asdrp-showcase p {
+  margin: 0;
+  font-family: "Lexend", "Georgia", "Times New Roman", serif;
+  font-size: 1.6rem;
+}
+
+#interests .about-title--panel {
+  text-align: center;
+  transform: translateX(-100px);
+}
+
+#interests .courses-list {
+  justify-items: center;
+}
+
+#interests .course-item {
+  gap: 140px;
+  align-items: center;
+  justify-content: center;
+  width: min(1200px, 100%);
+}
+
+#interests .course-image {
+  width: 280px;
+  height: 280px;
+  flex-basis: 280px;
+  transform: translateX(100px);
+}
+
+#interests .course-item p {
+  font-size: 2rem;
+  max-width: 520px;
+  transform: translateX(-100px);
+  align-self: center;
+}
+
+#interests .course-item:last-child .course-image {
+  transform: translateX(-40px);
+}
+
+#interests .course-item:last-child p {
+  transform: translateX(-240px);
+}
+
+.content-section .about-title--visible {
+  display: block;
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  letter-spacing: 0.2em;
+  font-family: "Lexend", "Georgia", "Times New Roman", serif;
+}
+
+.content-section .about-title--panel {
+  position: static;
+  text-align: left;
+  margin: 0 0 80px;
+}
+
+#academics .about-title--panel {
+  transform: translateX(450px);
+}
+
 .about-view--white {
   background: #ffffff;
   align-content: start;
@@ -486,6 +601,20 @@ body::after {
   align-content: start;
   padding-top: 0;
   z-index: 2;
+}
+
+.content-section--imaging {
+  background: #faf7f2;
+  padding-top: 80px;
+}
+
+.imaging-title {
+  margin: 0 0 48px;
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  letter-spacing: 0.16em;
+  font-family: "Lexend", "Georgia", "Times New Roman", serif;
+  text-align: center;
+  transform: translateX(-100px);
 }
 
 
@@ -508,10 +637,11 @@ body.is-imaging .menu-link:hover {
 .gallery {
   width: min(1400px, 92vw);
   display: grid;
-  grid-template-columns: 400px;
+  grid-template-columns: repeat(2, 400px);
   gap: 50px;
   margin-top: 100px;
   justify-content: center;
+  transform: translateX(-100px);
 }
 
 .gallery-item {
@@ -531,22 +661,29 @@ body.is-imaging .menu-link:hover {
 
 .gallery-item--serpent {
   background-image: url("Serpent.png");
+  background-size: contain;
 }
 
 .gallery-item--lizardman {
   background-image: url("Lizardman.png");
 }
 
+.gallery-item--placeholder {
+  background-image: url("Wukong.png");
+  background-size: contain;
+}
+
 .courses-list {
-  position: absolute;
-  top: 260px;
-  right: 460px;
   display: grid;
-  gap: 200px;
+  gap: 60px;
   font-size: 1.6rem;
   font-family: "Lexend", "Georgia", "Times New Roman", serif;
-  z-index: 4;
-  transform: translateX(200px);
+  max-width: 1200px;
+  margin-top: 40px;
+}
+
+#academics .courses-list {
+  padding-top: 120px;
 }
 
 .courses-list p {
@@ -580,9 +717,32 @@ body.is-imaging .menu-link:hover {
   flex: 0 0 200px;
 }
 
+.course-image-wrap .course-image {
+  width: 100%;
+  height: 100%;
+}
+
+.timeline-image-link {
+  margin-top: 10px;
+  border: none;
+  background: none;
+  padding: 0;
+  font-family: "Lexend", "Georgia", "Times New Roman", serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-align: left;
+  color: #2563eb;
+  cursor: pointer;
+}
+
+.timeline-image-link:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
 .gpa-overlay {
   position: absolute;
-  top: -130px;
+  top: -170px;
   left: 0;
   font-family: "Lexend", "Georgia", "Times New Roman", serif;
   font-weight: 800;
@@ -599,6 +759,7 @@ body.is-imaging .menu-link:hover {
 .course-item p {
   max-width: 420px;
   line-height: 1.5;
+  margin-left: 300px;
 }
 
 .course-text {
@@ -644,6 +805,10 @@ body.is-imaging .menu-link:hover {
   background-image: url("ENG.png");
 }
 
+.course-image--history {
+  background-image: url("USH.avif");
+}
+
 .course-image--me {
   background-image: url("Me.jpg");
 }
@@ -668,10 +833,84 @@ body.is-imaging .menu-link:hover {
   background-image: url("Spaghetti.jpg");
 }
 
+.courses-timeline {
+  position: relative;
+  margin-top: 40px;
+  padding: 40px 0 40px;
+  transform: translateX(10px);
+}
+
+.timeline-line {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 4px;
+  height: 1700px;
+  background: #000000;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  margin-bottom: 80px;
+}
+
+.timeline-item.left {
+  margin-right: auto;
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.timeline-item.right {
+  margin-left: auto;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.timeline-content {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.timeline-item.left .timeline-content {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.timeline-ridge {
+  width: 200px;
+  height: 4px;
+  background: #000000;
+}
+
+.timeline-item.left .timeline-ridge {
+  margin-left: 24px;
+}
+
+.timeline-item.right .timeline-ridge {
+  margin-right: 24px;
+}
+
+.timeline-content p {
+  margin: 0;
+  font-family: "Lexend", "Georgia", "Times New Roman", serif;
+}
+
+.period {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+}
+
 .tests-planned {
   text-align: left;
   font-family: "Lexend", "Georgia", "Times New Roman", serif;
-  transform: translate(80px, 80px);
+  justify-self: start;
 }
 
 .tests-planned h3 {
@@ -689,9 +928,9 @@ body.is-imaging .menu-link:hover {
 .past-projects {
   text-align: left;
   font-family: "Lexend", "Georgia", "Times New Roman", serif;
-  transform: translate(650px, -150px);
-  max-width: 320px;
+  max-width: 420px;
   position: relative;
+  justify-self: end;
 }
 
 .past-projects h3 {
@@ -708,27 +947,27 @@ body.is-imaging .menu-link:hover {
 }
 
 .past-projects-image {
-  position: absolute;
-  top: 50px;
-  left: 360px;
   width: 200px;
   height: 200px;
   background: #ffffff url("NLSY.png") center / cover no-repeat;
   border: 2px solid #000000;
   border-radius: 16px;
+  margin-top: 16px;
 }
 
 .course-panel {
-  position: absolute;
-  top: 2074px;
-  left: 0;
-  width: 800px;
-  height: 400px;
+  margin-top: -60px;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
   background: #ffffff;
   border-radius: 16px;
   box-shadow: none;
-  z-index: 3;
   padding: 48px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 48px;
+  transform: none;
 }
 
 .is-about .pets-section,
@@ -768,6 +1007,8 @@ body.is-imaging .menu-link:hover {
   margin-top: 100px;
   padding: 120px 8vw 160px;
   background: #e2ddd6;
+  width: 100%;
+  justify-self: stretch;
 }
 
 .pets-section h2 {
@@ -776,6 +1017,7 @@ body.is-imaging .menu-link:hover {
   margin: 0 0 48px;
   font-weight: 800;
   text-align: center;
+  transform: translateX(-100px);
 }
 
 .pets-grid {
@@ -783,6 +1025,7 @@ body.is-imaging .menu-link:hover {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 48px;
   align-items: start;
+  transform: translateX(-100px);
 }
 
 .pet-card {
@@ -872,6 +1115,8 @@ body.is-imaging .menu-link:hover {
 .contact-section {
   background: #ffffff;
   padding: 120px 8vw 160px;
+  width: 100%;
+  justify-self: stretch;
 }
 
 .contact-section h2 {
