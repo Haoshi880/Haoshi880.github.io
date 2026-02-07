@@ -10,16 +10,16 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main class="app">
+  <main class="app" id="top">
     <nav class="top-menu" aria-label="Primary">
       <div class="menu-inner">
         <div class="menu-group">
-          <button class="menu-link" type="button" data-target="academics">Academics</button>
-          <button class="menu-link" type="button" data-target="interests">Interests</button>
+          <button class="menu-link" type="button" data-scroll="academics">Academics</button>
+          <button class="menu-link" type="button" data-scroll="interests">Interests</button>
         </div>
-        <span class="menu-title">Personal Site</span>
+        <button class="menu-title menu-title--link" type="button" data-scroll="top">Haoyang Shi</button>
         <div class="menu-group">
-          <button class="menu-link" type="button" data-target="asdrp">ASDRP</button>
+          <button class="menu-link" type="button" data-scroll="asdrp">ASDRP</button>
           <button class="menu-link" type="button" data-scroll="contact">Contact Me</button>
         </div>
       </div>
@@ -62,7 +62,7 @@
 
       <div class="photo-grid">
         <div class="photo-row photo-row--right photo-row--shift-left">
-          <button class="photo-card" type="button" data-target="academics" aria-label="Open Academics">
+          <button class="photo-card" type="button" data-scroll="academics" aria-label="Open Academics">
             <span class="photo-label">Academics</span>
           </button>
           <div class="photo-textbox">
@@ -75,12 +75,12 @@
             <p>My hobbies, likes, and favorites in sport, music, food, and activies.</p>
             <p class="photo-callout"><strong>Click image to see more</strong> →</p>
           </div>
-          <button class="photo-card" type="button" data-target="interests" aria-label="Open Interests">
+          <button class="photo-card" type="button" data-scroll="interests" aria-label="Open Interests">
             <span class="photo-label">Interests</span>
           </button>
         </div>
         <div class="photo-row photo-row--right photo-row--shift-left">
-          <button class="photo-card" type="button" data-target="asdrp" aria-label="Open ASDRP">
+          <button class="photo-card" type="button" data-scroll="asdrp" aria-label="Open ASDRP">
             <span class="photo-label">ASDRP</span>
           </button>
           <div class="photo-textbox">
@@ -91,39 +91,73 @@
       </div>
     </section>
 
-    <section class="about-view" data-view="academics" aria-hidden="true">
-      <button class="back-button" type="button" aria-label="Go back">
-        ← Back
-      </button>
+    <section class="content-section" id="academics" aria-label="Academics">
       <h2 class="about-title about-title--visible about-title--panel">COURSES</h2>
-      <div class="courses-list">
-        <div class="course-item">
-          <div class="course-image-wrap">
-            <span class="course-image course-image--apchem" aria-hidden="true"></span>
-            <div class="gpa-overlay">
-              <p>Unweighted GPA: 3.8</p>
-              <p>Weighted GPA: 4.1</p>
+      <div class="courses-timeline">
+        <div class="timeline-line" aria-hidden="true"></div>
+        <div class="timeline-item left">
+          <div class="timeline-content">
+            <span class="course-image course-image--calc" aria-hidden="true"></span>
+            <div>
+              <p class="period">Period 1</p>
+              <p>AP Calc BC</p>
             </div>
           </div>
-          <p>- AP Chem : Fast-paced chemistry coursework with labs</p>
+          <div class="timeline-ridge" aria-hidden="true"></div>
         </div>
-        <div class="course-item">
-          <span class="course-image course-image--physics" aria-hidden="true"></span>
-          <p>- AP Physics 1 : Algebra-based physics course with labs</p>
+        <div class="timeline-item right">
+          <div class="timeline-ridge" aria-hidden="true"></div>
+          <div class="timeline-content">
+            <span class="course-image course-image--history" aria-hidden="true"></span>
+            <div>
+              <p class="period">Period 2</p>
+              <p>US History</p>
+            </div>
+          </div>
         </div>
-        <div class="course-item">
-          <span class="course-image course-image--calc" aria-hidden="true"></span>
-          <p>- AP Calculus BC : Covers limits, derivatives, integrals, along with advanced techniques and series.</p>
+        <div class="timeline-item left">
+          <div class="timeline-content">
+            <span class="course-image course-image--eng" aria-hidden="true"></span>
+            <div>
+              <p class="period">Period 3</p>
+              <p>Eng 11H</p>
+            </div>
+          </div>
+          <div class="timeline-ridge" aria-hidden="true"></div>
         </div>
-        <div class="course-item">
-          <span class="course-image course-image--eng" aria-hidden="true"></span>
-          <p>- English 11 Honors : Reading, writing, analysis, and projects.</p>
+        <div class="timeline-item right">
+          <div class="timeline-ridge" aria-hidden="true"></div>
+          <div class="timeline-content">
+            <span class="course-image course-image--apchem" aria-hidden="true"></span>
+            <div>
+              <p class="period">Period 4</p>
+              <p>AP Chem</p>
+            </div>
+          </div>
         </div>
-        <div class="course-item">
-          <span class="course-image course-image--ps" aria-hidden="true"></span>
-          <div class="course-text">
-            <p>- Digital Imaging 2 : Photoshop and 3D sculpting</p>
-            <button class="page-link" type="button" data-target="imaging">Click here to see some of my work</button>
+        <div class="timeline-item left">
+          <div class="timeline-content">
+            <span class="course-image course-image--physics" aria-hidden="true"></span>
+            <div>
+              <p class="period">Period 5</p>
+              <p>AP Physics 1</p>
+            </div>
+          </div>
+          <div class="timeline-ridge" aria-hidden="true"></div>
+        </div>
+        <div class="timeline-item right">
+          <div class="timeline-ridge" aria-hidden="true"></div>
+          <div class="timeline-content">
+            <div class="course-image-wrap">
+              <span class="course-image course-image--ps" aria-hidden="true"></span>
+            </div>
+            <div>
+              <p class="period">Period 6</p>
+              <p>Digital Imaging 2</p>
+              <button class="timeline-image-link" type="button" data-scroll="imaging">
+                Click here to see some of my work
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -141,10 +175,7 @@
         </div>
       </div>
     </section>
-    <section class="about-view" data-view="interests" aria-hidden="true">
-      <button class="back-button" type="button" aria-label="Go back">
-        ← Back
-      </button>
+    <section class="content-section" id="interests" aria-label="Interests">
       <h2 class="about-title about-title--visible about-title--panel">INTERESTS</h2>
       <div class="courses-list">
         <div class="course-item">
@@ -173,20 +204,20 @@
         </div>
       </div>
     </section>
-    <section class="about-view" data-view="asdrp" aria-hidden="true">
-      <button class="back-button" type="button" aria-label="Go back">
-        ← Back
-      </button>
-      <h2 class="about-title">ASDRP</h2>
+    <section class="content-section" id="asdrp" aria-label="ASDRP">
+      <h2 class="about-title about-title--visible about-title--panel">ASDRP</h2>
+      <div class="asdrp-showcase">
+        <div class="asdrp-image" aria-hidden="true"></div>
+        <p>A classic hangman game made in Python</p>
+      </div>
     </section>
-    <section class="about-view about-view--imaging" data-view="imaging" aria-hidden="true">
-      <button class="back-button" type="button" data-back="academics" aria-label="Go back">
-        ← Back
-      </button>
+    <section class="content-section content-section--imaging" id="imaging" aria-label="Digital imaging works">
+      <h2 class="imaging-title">MY DIGITAL IMAGING 2 WORKS</h2>
       <div class="gallery">
         <div class="gallery-item gallery-item--wooflien" aria-hidden="true"></div>
         <div class="gallery-item gallery-item--serpent" aria-hidden="true"></div>
         <div class="gallery-item gallery-item--lizardman" aria-hidden="true"></div>
+        <div class="gallery-item gallery-item--placeholder" aria-hidden="true"></div>
       </div>
     </section>
 
@@ -199,6 +230,7 @@
             <span class="pet-arrow">↓</span>
           </button>
           <div class="pet-details" aria-hidden="true">
+            <p><strong>Name:</strong> Mimi</p>
             <p><strong>Age:</strong> 4 years old</p>
             <p><strong>Breed:</strong> American Shorthair, tuxedo fur pattern</p>
             <p><strong>Personality:</strong> Chill, athletic, outdoor-loving</p>
@@ -211,6 +243,7 @@
             <span class="pet-arrow">↓</span>
           </button>
           <div class="pet-details" aria-hidden="true">
+            <p><strong>Name:</strong> Isabel</p>
             <p><strong>Age:</strong> 3 years old</p>
             <p><strong>Breed:</strong> Golden Retriever</p>
             <p><strong>Personality:</strong> Loyal, foodie, sedentary</p>
